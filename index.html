@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Orbit - Bootstrap 5 Resume/CV Template for Developers</title>
+    <title>Résumé - Matt Gordon</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -135,34 +135,35 @@
             </section><!--//section-->
 
             <section class="skills-section section">
-                <h2 class="section-title"><span class="icon-holder"><i class="fa-solid fa-rocket"></i></span>Skills &amp; Proficiency</h2>
-                <div class="skillset">
+                <h2 class="section-title"><span class="icon-holder"><i class="fa-solid fa-rocket"></i></span>Skills</h2>
+                
+                <!--<div class="skillset">
                     <div class="item">
                         <h3 class="level-title">.NET</h3>
                         <div class="progress level-bar">
                             <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95%" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </div><!--//item-->
+                    </div>--><!--//item-->
 
-                    <div class="item">
+                    <!--<div class="item">
                         <h3 class="level-title">JavaScript</h3>
                         <div class="progress level-bar">
                             <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </div><!--//item-->
+                    </div>--><!--//item-->
 
-                    <div class="item">
+                    <!--<div class="item">
                         <h3 class="level-title">T-SQL</h3>
                         <div class="progress level-bar">
                             <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </div><!--//item-->
-                </div>
+                    </div>--><!--//item-->
+                <!--</div>
+                <hr />-->
 
-                <hr />
                 <div class="summary">
-                    <h6>Details</h6>
-                    <table class="table table-striped">
+                    <!--<h6>Details</h6>-->
+                    <table class="table table-sm">
                         <tbody>
                             <tr>
                                 <th>Programming Languages</th>
@@ -279,20 +280,35 @@
                     </div><!--//meta-->
                     <div class="details">
                         <p>
-                            Our VS .sln consists of 183 projects, inc. 23 .NET APIs, 11 MVC projects and the rest are mostly libraries.
+                            We have a great many apps/projects. The main Visual Studio solution consists of 183 projects, of which
+                            23 are ASP.NET APIs, 11 are ASP.NET MVC projects and the rest are libraries, unit tests and windows services.
                             Our MVC apps are slowly being migrated to APIs with a React frontend.
-                        </p>
-                        <p>My achievements thus far:</p>
-                        <ul>
-                            <li>Migrated our "MyRapid" app from ASP.NET MVC to ASP.NET API</li>
-                            <li>Refactored our FormBuilder app - This took many months of work to move away from WCF and cleanup/refactor the code which was extremely messy.</li>
-                            <li>Migrated all internal WCF services to just be code in our class libraries.</li>
-                            <li>EF code first: When I first joined, we were still using .NET Framework 4.8. The plan was to move to .NET 8. As a first step, I suggested we first move from EDMX to code first and was given the green light to do so.. This was done for 16 databases, many having 100s of tables</li>
-                            <li>Migrated our "Contractor Registration" app from MVC to API</li>
-                            <li>Created PDF API - We use ABCPdf. Until this point, each app/lib was referencing the NuGet packages for this. This caused perf. issues and slow deployments. I had the idea to move all our PDF generating code to one central API. This massively improved build &amp; deployment times and saved more than 100GB of space on all dev machines.</li>
-                            <li>Spearheaded the migration to .NET 8. For my part, this included a large portion of the class libs, 100% of the MVC apps and a few of the APIs. We got this all started and finished within the last quarter of '24 while still continuing to develop and deliver new features on the old version at the same time.</li>
-                            <li>EFCore: Due to many differences between EF6 and EFCore, I recommended we not move to EFCore during the main .NET migration. Once the latter was completed, I was assigned the case of migrating to EFCore, which was a mammoth task in itself.</li>
 
+                            <ul>
+                                <li>
+                                    We are migrating the MVC apps to APIs with a React frontend.
+                                </li>
+                                <li>
+                                    We have one main application called MyRapid which users need to login to and from there they can get
+                                    redirected to one of the other applications.
+                                </li>
+                                <li>
+                                    We also have a shared application called FormBuilder which, as the name implies, allows admin users to setup forms
+                                    and then other users to fill in instances of those forms. This is shared amongst many apps as a sub application
+                                    in IIS (using an iframe).
+                                </li>
+                            </ul>
+                        </p>
+                        <p>My achievements thus far (in chronological order):</p>
+                        <ul>
+                            <li>Migrated our "MyRapid" app (see above) from ASP.NET MVC to ASP.NET Web API</li>
+                            <li>Refactored FormBuilder - This took many months of work to move away from WCF and clean up the code, which was extremely messy and difficult to understand.</li>
+                            <li>Migrated all other WCF services to just be in our class libraries.</li>
+                            <li>EF code first: When I first joined, we were still using .NET Framework 4.8. The plan was to move to .NET 8. As a first step, I helped move from EDMX to code first for EF6 (still on .NET Framework 4.8).</li>
+                            <li>Migrated our "Contractor Registration" app from ASP.NET MVC to ASP.NET API</li>
+                            <li>Created a PDF API - We use ABCPdf. Until this point, each app/library was referencing the NuGet packages for this. This caused performance issues and slow deployments, not least of which is because the several hundred MB of files had to be downloaded/copied each time for each app/library. I had the idea to move all our PDF generating code to one central API and so only that had to reference the NuGet libraries. This massively improved build times, deployment times and saved more than 100GB of space on all developer machines.</li>
+                            <li>Spearheaded the migration of all our .NET code from .NET Framework 4.8 to .NET 8. For my part, this included a large portion of the class libraries, 100% of the MVC apps and a few of the APIs. We got this all done within the last quarter of 2024 while still continuing to develop and deliver new features on the old version at the same time.</li>
+                            <li>Entity Framework Core: Due to many differences between EF6 and EFCore, I recommended we do not move to EFCore during the main .NET migration. Once the latter was completed, I was assigned the case of migrating to EFCore, which was a mammoth task in itself.</li>
                         </ul>
                     </div><!--//details-->
                 </div><!--//item-->
@@ -386,7 +402,7 @@
                         <ul>
                             <li>
                                 Intensive study for EPiServer 7 CMS and EPiServer 7 Commerce certifications, as these are
-                                used heavily by the company and are requirements for me to have before taking on the
+                                used heavily by the company and were requirements for me to have before taking on the
                                 “Team Leader” role that they wanted me for.
                             </li>
                             <li>
