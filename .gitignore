@@ -1,2 +1,5 @@
 .DS_Store
 config.codekit
+
+# Visual Studio cache/options directory
+.vs/
