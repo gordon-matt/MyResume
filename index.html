@@ -26,6 +26,48 @@
             border-radius: 50%;
             object-fit: cover; /* ensures the image fills the circle properly */
         }
+
+        .project-logos {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-bottom: 15px;
+        }
+
+        .project-logos td {
+            width: 33.33%;
+            border: none;
+            text-align: center;
+            vertical-align: middle;
+            padding: 12px 10px;
+        }
+
+        .project-logos a {
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        .project-logos a:hover {
+            text-decoration: none;
+            opacity: 0.85;
+        }
+
+        .project-logos img {
+            display: block;
+            width: 100%;
+            height: 64px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 767.98px) {
+            .project-logos td {
+                padding: 8px 4px;
+            }
+
+            .project-logos img {
+                height: 48px;
+            }
+        }
     </style>
 </head>
 
@@ -237,86 +279,125 @@
                 </div>
                 <!--//intro-->
 
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/Extenso" target="_blank">Extenso Code Library</a>
-                    </span> -
-                    <span class="project-tagline">
-                        More than just an extensions library - various helper classes, data access code, even a lightweight alternative to AutoMapper.
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/MantleCMS" target="_blank">Mantle CMS</a>
-                    </span> -
-                    <span class="project-tagline">
-                        Mantle is a multi-purpose framework and CMS loaded with functionality and features that can be used for creating pretty
-                        much any type of website. Built on .NET Core
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/peachpie-responsive-file-manager" target="_blank">Responsive File Manager for .NET Core using PeachPie</a>
-                    </span> -
-                    <span class="project-tagline">
-                        Responsive File Manager running on .NET Core with Peachpie.
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/elFinder.NetCore" target="_blank">elFinder.NetCore</a>
-                    </span> -
-                    <span class="project-tagline">
-                        elFinder connector for .NET Core
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/CodeShop" target="_blank">CodeShop</a>
-                    </span> -
-                    <span class="project-tagline">
-                        Code Shop is a database centric template based code generator for any text(ascii) programming language like C, PHP, C#, Visual Basic, Java, Perl, Python… Supported databases are SQL Server, MySQL, PostgreSQL and Oracle
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/KoreCMS" target="_blank">Kore CMS</a>
-                    </span> -
-                    <span class="project-tagline">
-                        The precursor to Mantle CMS mentioned above. This one was built on MVC5.
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/Heroicsoft.DevToys.CodeGenerator" target="_blank">DevToys Code Generator</a>
-                    </span> -
-                    <span class="project-tagline">
-                        DevToys Code Generator is a tool that helps you generate code snippets. Use the liquid templating language to iterate over a list of strings, JSON data or a CSV file
-                    </span>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                    <span class="project-title">
-                        <a href="https://github.com/gordon-matt/DataMigrator" target="_blank">Data Migrator</a>
-                    </span> -
-                    <span class="project-tagline">
-                        Migrate data from any database system to any database system - extensible via plugins (developed with MEF).
-                    </span>
-                </div>
-                <!--//item-->
+                <table class="project-logos">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/WebFilez" target="_blank" title="Hands-down the best open source web file manager around.">
+                                    <img src="assets/images/projects/WebFilez.png" alt="WebFilez" title="Hands-down the best open source web file manager around.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/elFinder.NetCore" target="_blank" title="elFinder connector for .NET Core">
+                                    <img src="assets/images/projects/elFinder.NetCore.png" alt="elFinder.NetCore" title="elFinder connector for .NET Core">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Extenso" target="_blank" title="More than just an extensions library - various helper classes, data access code, even a lightweight alternative to AutoMapper.">
+                                    <img src="assets/images/projects/Extenso.png" alt="Extenso Code Library" title="More than just an extensions library - various helper classes, data access code, even a lightweight alternative to AutoMapper.">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Doxie" target="_blank" title="Help Generator for .NET Assemblies">
+                                    <img src="assets/images/projects/Doxie.png" alt="Doxie" title="Help Generator for .NET Assemblies">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/EasyChatz" target="_blank" title="An embeddable chat for .NET 10. It is written in Blazor and also runs in MVC, React, or any HTML page through a custom element. Rooms and direct messages are stored in MySQL, PostgreSQL, SQL Server or SQLite.">
+                                    <img src="assets/images/projects/EasyChatz.png" alt="EasyChatz" title="An embeddable chat for .NET 10. It is written in Blazor and also runs in MVC, React, or any HTML page through a custom element. Rooms and direct messages are stored in MySQL, PostgreSQL, SQL Server or SQLite.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Flatmate" target="_blank" title="Multi-tenancy for ASP.NET Core">
+                                    <img src="assets/images/projects/Flatmate.png" alt="Flatmate" title="Multi-tenancy for ASP.NET Core">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Kinnect" target="_blank" title="Self-hosted family tree / social platform.">
+                                    <img src="assets/images/projects/Kinnect.png" alt="Kinnect" title="Self-hosted family tree / social platform.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Shelfwarden" target="_blank" title="Self-hosted e-book management app with a flexible file layout, multiple database providers, audiobook generation and features you won't find in similar apps.">
+                                    <img src="assets/images/projects/Shelfwarden.png" alt="Shelfwarden" title="Self-hosted e-book management app with a flexible file layout, multiple database providers, audiobook generation and features you won't find in similar apps.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/MyVideoArchive" target="_blank" title="Self-hosted video archiver for YouTube, BitChute, and your own files.">
+                                    <img src="assets/images/projects/MyVideoArchive.jpg" alt="My Video Archive" title="Self-hosted video archiver for YouTube, BitChute, and your own files.">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/MantleCMS" target="_blank" title="Mantle is a multi-purpose framework and CMS loaded with functionality and features that can be used for creating pretty much any type of website. Built on .NET Core">
+                                    <img src="assets/images/projects/MantleCMS.png" alt="Mantle CMS" title="Mantle is a multi-purpose framework and CMS loaded with functionality and features that can be used for creating pretty much any type of website. Built on .NET Core">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Pickstack" target="_blank" title="Pickstack is a set of replaceable ASP.NET Core components. An app picks a file manager and a rich text editor, and can later swap either one by changing a package reference and a registration. File fields and editors keep working because they talk to Pickstack, not to elFinder, Responsive File Manager, WebFilez, TinyMCE, or CKEditor.">
+                                    <img src="assets/images/projects/Pickstack.png" alt="Pickstack" title="Pickstack is a set of replaceable ASP.NET Core components. An app picks a file manager and a rich text editor, and can later swap either one by changing a package reference and a registration. File fields and editors keep working because they talk to Pickstack, not to elFinder, Responsive File Manager, WebFilez, TinyMCE, or CKEditor.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/LogVue" target="_blank" title="Log viewer inspired by Sejil - built as a Razor Class Library">
+                                    <img src="assets/images/projects/LogVue.png" alt="LogVue" title="Log viewer inspired by Sejil - built as a Razor Class Library">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/ReelSoon" target="_blank" title="Self-hosted watch list for movies, tv series and games.">
+                                    <img src="assets/images/projects/ReelSoon.png" alt="ReelSoon" title="Self-hosted watch list for movies, tv series and games.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Snippetz" target="_blank" title="Self-hosted app for organizing your code snippets. It allows you to easily create, edit, browse and manage your snippets in various languages.">
+                                    <img src="assets/images/projects/Snippetz.png" alt="Snippetz" title="Self-hosted app for organizing your code snippets. It allows you to easily create, edit, browse and manage your snippets in various languages.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/MyWebTree" target="_blank" title="Family Tree component built in Blazor">
+                                    <img src="assets/images/projects/MyWebTree.png" alt="MyWebTree" title="Family Tree component built in Blazor">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/IdentityNexus" target="_blank" title="Management UI for ASP.NET Core Identity, built as a Razor Class Library.">
+                                    <img src="assets/images/projects/IdentityNexus.png" alt="IdentityNexus" title="Management UI for ASP.NET Core Identity, built as a Razor Class Library.">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/GedcomSharp" target="_blank" title="Read and write genealogy data in every GEDCOM format: 5.5, 5.5.1, 5.5.5 and 7.0, GEDZIP packages (.gdz), and GEDCOM X as JSON, XML or .gedx files">
+                                    <img src="assets/images/projects/GedcomSharp.png" alt="GedcomSharp" title="Read and write genealogy data in every GEDCOM format: 5.5, 5.5.1, 5.5.5 and 7.0, GEDZIP packages (.gdz), and GEDCOM X as JSON, XML or .gedx files">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/Dependo" target="_blank" title="Need to utilize dependency injection within extension methods or other challenging contexts? Or perhaps you're building a framework and want it to remain agnostic to any particular DI container, giving users the freedom to choose their own? Dependo has you covered.">
+                                    <img src="assets/images/projects/Dependo.png" alt="Dependo" title="Need to utilize dependency injection within extension methods or other challenging contexts? Or perhaps you're building a framework and want it to remain agnostic to any particular DI container, giving users the freedom to choose their own? Dependo has you covered.">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/gordon-matt/DataMigrator" target="_blank" title="Migrate data from any database system to any database system - extensible via plugins (developed with MEF).">
+                                    <img src="assets/images/projects/DataMigrator.png" alt="Data Migrator" title="Migrate data from any database system to any database system - extensible via plugins (developed with MEF).">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/gordon-matt/PicStashly" target="_blank" title="Self-hosted meme image library.">
+                                    <img src="assets/images/projects/PicStashly.png" alt="PicStashly" title="Self-hosted meme image library.">
+                                </a>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <p>And many more projects you can find on my <a href="https://github.com/gordon-matt" target="_blank">GitHub</a> page</p>
             </section><!--//section-->
